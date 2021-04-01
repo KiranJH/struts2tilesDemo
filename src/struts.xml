@@ -1,0 +1,17 @@
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+	<struts>
+	<package name="struts2tilesDemo" extends="struts-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<action name="reg" class="com.jamCracker.Registration">
+		<result name="success" type="tiles">login-success</result>  
+		<result name="error" type="tiles">login-error</result>  
+		</action>
+		
+	</package>
+</struts>
